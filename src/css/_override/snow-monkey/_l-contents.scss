@@ -1,0 +1,17 @@
+//コンテナ
+.l-contents__container{
+}
+
+
+//コンテンツ内包
+.l-contents__inner{
+	.home &{
+		padding-top: 0;
+		padding-bottom: 0;
+	}
+	body:not(.home) &{
+		@include mq(lg){
+			padding-bottom: px_to_rem(120);
+		}
+	}
+}

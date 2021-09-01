@@ -1,0 +1,38 @@
+.c-widget{
+	> h2{
+		@include heading2;
+	}
+	> h3{
+		@include heading3;
+	}
+	> h4{
+		@include heading4;
+	}
+	> ul{
+		> li::marker{
+			color:var(--accent-color,#cd162c);
+		}
+	}
+	p{
+		@include paragraph;
+	}
+	.wp-block-group > .wp-block-group__inner-container{
+		> h2{
+			@include heading2;
+		}
+		> h3{
+			@include heading3;
+		}
+		> h4{
+			@include heading4;
+		}
+		> ul{
+			> li::marker{
+				color:var(--accent-color,#cd162c);
+			}
+		}
+		p{
+			@include paragraph;
+		}
+	}
+}

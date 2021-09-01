@@ -28,3 +28,18 @@ msgstr ""
 msgid "[RUI-JIN-EN Block Patterns] This Plugin must need the premium theme Snow Monkey."
 msgstr ""
 "【類人猿ブロックパターン】このプラグインはプレミアムテーマ Snow Monkeyが必須です."
+
+#: App/Setup/AdminMenu.php:24
+msgid "[RUI-JIN-EN Skin] Type LP(R002)"
+msgstr ""
+"類人猿スキン：LP向け（R002）"
+
+#: App/Setup/AdminMenu.php:52
+msgid "Recommended settings for Snow Monkey customization items"
+msgstr ""
+"Snow Monkeyのカスタマイズ項目のおすすめ設定"
+
+#: App/Setup/AdminMenu.php:57
+msgid "Make the recommended settings"
+msgstr ""
+"おすすめの設定にする"

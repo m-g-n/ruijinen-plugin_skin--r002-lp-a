@@ -17,6 +17,7 @@
  * @license GPL-2.0+
  */
 
+//TODO: 各ファイルの翻訳を作る
 
 namespace Ruijinen\Skin\R002_LP;
 
@@ -27,58 +28,53 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * declaration constant.
  */
-define( 'RJE_SKIN_R002_LP_URL', untrailingslashit( plugins_url( '', __FILE__ ) ) . '/' );  //このプラグインのURL.
-define( 'RJE_SKIN_R002_LP_PATH', untrailingslashit( plugin_dir_path( __FILE__ ) ) . '/' ); //このプラグインのパス.
-define( 'RJE_SKIN_R002_LP_BASENAME', plugin_basename( __FILE__ ) ); //このプラグインのベースネーム.
-define( 'RJE_SKIN_R002_LP_TEXTDOMAIN', 'ruijinen-skin--r002-lp' ); //テキストドメイン名.
+define( 'RJE_SKIN_R002_LP_A_URL', untrailingslashit( plugins_url( '', __FILE__ ) ) . '/' );  //このプラグインのURL.
+define( 'RJE_SKIN_R002_LP_A_PATH', untrailingslashit( plugin_dir_path( __FILE__ ) ) . '/' ); //このプラグインのパス.
+define( 'RJE_SKIN_R002_LP_A_BASENAME', plugin_basename( __FILE__ ) ); //このプラグインのベースネーム.
+define( 'RJE_SKIN_R002_LP_A_TEXTDOMAIN', 'ruijinen-skin--r002-lp-a' ); //テキストドメイン名.
 
 /**
- * Include Files.
+ * include files.
  */
-require_once(RJE_SKIN_R002_LP_PATH . 'App/Setup/ActivatePlugin.php'); //プラグインのアクティベート処理.
-require_once(RJE_SKIN_R002_LP_PATH . 'App/Setup/AutoUpdate.php'); //プラグインの更新確認.
-require_once(RJE_SKIN_R002_LP_PATH . '/App/Setup/TextDomain.php'); //テキストドメイン.
-require_once(RJE_SKIN_R002_LP_PATH . '/vendor/autoload.php'); //アップデート用composer.
+require_once(RJE_SKIN_R002_LP_A_PATH . 'vendor/autoload.php'); //アップデート用composer.
+
+//各処理用のクラスを読み込む
+foreach (glob(RJE_SKIN_R002_LP_A_PATH.'App/**/*.php') as $filename) {
+	require_once $filename;
+}
 
 /**
  * 初期設定.
  */
 class Bootstrap {
-
 	/**
 	 * Constructor.
 	 */
 	public function __construct() {
-		add_action( 'plugins_loaded', [ $this, '_bootstrap' ] );
-		// add_action( 'snow_monkey_design_skin_choices', [ $this, '_add_choice_skin' ] );
-		// add_action( 'after_setup_theme', [ $this, '_add_choice_skin' ] );
+		add_action( 'plugins_loaded', [ $this, 'bootstrap' ] );
+		add_action( 'after_setup_theme', [ $this, 'themes_customize' ] );
 	}
 
 	/**
 	 * Bootstrap.
 	 */
-	public function _bootstrap() {
+	public function bootstrap() {
+		//クラスオブジェクト作成
 		new App\Setup\ActivatePlugin();
 		// new App\Setup\AutoUpdate();
 		new App\Setup\TextDomain();
+		new App\Setup\Assets();
+		// new App\Setup\AdminMenu();
 	}
 
-	public function hoge() {
-		//オプションページの設定
-		//カスタマイザーの設定
-		//必要なJSの読み込み
-		//必要なCSSの読み込み 
+	/**
+	 * Snow Monkeyテーマのカスタマイズ.
+	 */
+	public function themes_customize() {
+		new App\ThemesCustomize\Archives(); //投稿アーカイブ関連のカスタマイズ.
+		new App\ThemesCustomize\Single(); //singleページ関連のカスタマイズ.
+		new App\ThemesCustomize\EntryHeader(); //コンテンツヘッダーのカスタマイズ.
 	}
-
-
-
-
-
-
-
 }
 
 new \Ruijinen\Skin\R002_LP\Bootstrap();
-
-
-

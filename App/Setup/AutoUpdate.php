@@ -15,7 +15,7 @@ class AutoUpdate{
 	 * Constructor.
 	 */
 	public function __construct() {
-		add_action( 'init', array( $this, '_activate_autoupdate' ) );
+		add_action( 'init', array( $this, 'activate_autoupdate' ) );
 	}
 
 	/**
@@ -23,9 +23,9 @@ class AutoUpdate{
 	 *
 	 * @return void
 	 */
-	public function _activate_autoupdate() {
+	public function activate_autoupdate() {
 		new Updater(
-			RJE_SKIN_R002_LP_BASENAME,
+			RJE_SKIN_R002_LP_A_BASENAME,
 			'm-g-n',
 			'ruijinen-skin--r002-lp',
 			[

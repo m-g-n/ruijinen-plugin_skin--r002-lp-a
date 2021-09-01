@@ -1,0 +1,47 @@
+// ======================================================
+//
+// LPパターン向けサイトのスタイル.
+//
+// ======================================================
+
+// ------------------------------------------------------
+// Foundation.
+// ------------------------------------------------------
+
+// variable
+@import '_foundation/variable/variable';
+
+//mixin
+@import '_foundation/mixin/mediaqueries'; //メディアクエリー.
+@import '_foundation/mixin/common_parts'; //汎用的に利用するパーツのスタイル.
+
+//function.
+@import '_foundation/function/px_to_rem'; //px値をrem値に変更して返す.
+
+// ------------------------------------------------------
+// Override.
+// ------------------------------------------------------
+//Snow Monkeyテーマ
+@import '_override/snow-monkey/root';
+@import '_override/snow-monkey/l-header';
+@import '_override/snow-monkey/l-contents';
+@import '_override/snow-monkey/l-footer';
+@import '_override/snow-monkey/c-entries';
+@import '_override/snow-monkey/c-pagination';
+@import '_override/snow-monkey/c-entry';
+@import '_override/snow-monkey/c-widget';
+@import '_override/snow-monkey/u-slim-width';
+@import '_override/snow-monkey/wp-profile-box';
+
+
+//Snow Monkey Form
+@import '_override/snow-monkey-form/smf-item';
+
+
+// ------------------------------------------------------
+// Original.
+// ------------------------------------------------------
+@import '_original/pagination_arrow'; //ページネーションの矢印.
+@import '_original/prev_next_nav'; //前へ次へナビゲーション.
+@import '_original/entry_subtitle'; //ページサブタイトル.
+@import '_original/related_posts'; //関連記事.

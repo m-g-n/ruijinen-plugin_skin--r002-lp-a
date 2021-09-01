@@ -1,0 +1,25 @@
+//ヘッダ
+.l-header__content > .l-1row-header > .c-fluid-container{
+	@include mq(lg){
+		padding-top: px_to_rem(20);
+		padding-right: px_to_rem(36);
+		padding-bottom: px_to_rem(20);
+		padding-left: px_to_rem(60);
+	}
+}
+[data-scrolled="true"] .l-header__content > .l-1row-header > .c-fluid-container{
+	padding-top: 0;
+	padding-bottom: 0;
+}
+[data-scrolled="false"] .l-header--sticky-lg{
+	box-shadow: none;
+}
+
+
+//グローバルナビゲーション.
+.p-global-nav{
+	.c-navbar__item > a{
+		padding: px_to_rem(24);
+		font-weight: normal;
+	}
+}

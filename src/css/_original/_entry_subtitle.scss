@@ -1,0 +1,8 @@
+.rje-r002lp-a_entry_subtitle{
+	@include smb-section-subtitle;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	font-size: px_to_rem(12);
+	color: var(--accent-color,#cd162c);
+}

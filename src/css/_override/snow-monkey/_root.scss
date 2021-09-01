@@ -1,0 +1,6 @@
+//html body CSS変数など ベースに関わる修正
+
+// CSS変数の値を書き換え
+:root {
+	--_color-text: #{$color-text};
+}

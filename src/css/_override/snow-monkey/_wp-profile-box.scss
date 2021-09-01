@@ -1,0 +1,23 @@
+.wp-profile-box{
+	@include mq(lg){
+		margin-top: 4.5rem;
+	}
+}
+.wp-profile-box__title{
+	border-bottom: none;
+	@include heading3;
+	@include mq(sm){
+		padding: #{px_to_rem(35)} #{px_to_rem(40)} #{px_to_rem(35) / 2};
+	}
+}
+.wp-profile-box__container{
+	@include mq(sm){
+		padding: #{px_to_rem(35) / 2} #{px_to_rem(40)} #{px_to_rem(35)};
+	}
+}
+.wp-profile-box__body{
+	letter-spacing: 0.05em;
+}
+.wp-profile-box__archives-btn{
+	border-radius: 6.25rem;
+}

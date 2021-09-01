@@ -1,0 +1,19 @@
+.c-pagination:not(:root){ 
+	@include mq(lg){
+		margin-top: px_to_rem(64);
+	}
+}
+.c-pagination__item,
+.c-pagination__item-ellipsis,
+.c-pagination__item-link{
+	width: px_to_rem(32);
+	height: px_to_rem(32);
+	margin-right: 6px;
+	margin-left: 6px;
+	border-radius: 50%;
+	font-size: 1rem;
+}
+.c-pagination__item-ellipsis,
+.c-pagination__item-link{
+	background-color: unset;
+}

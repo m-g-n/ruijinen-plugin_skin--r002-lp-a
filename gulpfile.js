@@ -7,19 +7,19 @@ var merge = require('merge-stream');
 
 gulp.task('sass', function() {
 	var common_style = gulp.src('./src/css/**/*.scss')
-        .pipe(sass({outputStyle: 'compressed'}))
-        .pipe(autoprefixer())
-        .pipe(gulp.dest('dist/css/'));
+		.pipe(sass({outputStyle: 'compressed'}))
+		.pipe(autoprefixer())
+		.pipe(gulp.dest('dist/css/'));
 	return merge(common_style);
 });
 
 gulp.task('js', function(done) {
-    gulp.src(['./patterns/**/*.js', '!patterns/__patterns_examples/*.js'])
-        .pipe(uglify())
-        .pipe(rename({
-            extname: '.min.js'
-        }))
-        .pipe(gulp.dest('dist/js'));
+	gulp.src('./src/js/**/*.js')
+		.pipe(uglify())
+		.pipe(rename({
+			extname: '.min.js'
+		}))
+		.pipe(gulp.dest('dist/js'));
 	done();
 });
 
