@@ -65,13 +65,12 @@ class EntryHeader{
 		add_filter( 
 			'rje_r002lp_a_page_sub_title',
 			function( $text ) {
-				if ( is_home() ) {
+				if ( is_category() || is_tag() ) {
 					$text = 'NEWS';
 				}
 				return $text;
 			}
 		);
-
 	}
 
 	/**
@@ -89,13 +88,16 @@ class EntryHeader{
 
 	private function get_subtitle() {
 		$text = NULL;
-		if ( is_archive() ) {
-			$text = get_query_var('post_type');
-		} elseif ( is_home() ) {
-			$text = '';
-		} elseif ( is_page() ) {
-			global $post;
-			$text = get_post_meta( $post->ID, $this->meta_key, true);
+		if ( is_post_type_archive() ) {
+			$text = strtoupper( get_query_var('post_type') );
+		} elseif ( is_tax() ) {
+			$tax  = get_query_var('taxonomy');
+			$text = strtoupper( get_taxonomy($tax)->object_type[0] );
+		} elseif ( is_home() || is_page() ) {
+			$queried_object = get_queried_object();
+			if ( $queried_object->ID ) {
+				$text = get_post_meta( $queried_object->ID, $this->meta_key, true);
+			}
 		}
 		$subtitle = apply_filters( 'rje_r002lp_a_page_sub_title', $text );
 		return $subtitle;
