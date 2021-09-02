@@ -9,6 +9,19 @@
 .rje-r002lp-a_prev_next_nav__item{
 	display: flex;
 	min-width: px_to_rem(110);
+	&--next{
+		padding-right: px_to_rem(24);
+		@include mq(lg){
+			padding-right: px_to_rem(60);
+		}
+		
+	}
+	&--prev{
+		padding-left: px_to_rem(24);
+		@include mq(lg){
+			padding-left: px_to_rem(60);
+		}
+	}
 	a{
 		color: var(--_color-text,#333);
 		text-decoration: none;
@@ -25,12 +38,3 @@
 		}
 	}
 }
-.rje-r002lp-a_prev_next_nav__separate{
-	display: inline-block;
-	height: 1.5rem;
-	width: 1px;
-	margin-right: px_to_rem(60);
-	margin-left: px_to_rem(60);
-	background-color: #999;
-}
-

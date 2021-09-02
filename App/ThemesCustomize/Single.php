@@ -46,10 +46,10 @@ class Single{
 				'before' => '/<div class="c-prev-next-nav__item-title">(.*?)<\/div>/s',
 				'after' => '',
 			),
-			'separate' => array(
-				'before' => '/<div class="c-prev-next-nav__item c-prev-next-nav__item--prev/',
-				'after'  => '<span class="rje-r002lp-a_prev_next_nav__separate"></span><div class="c-prev-next-nav__item c-prev-next-nav__item--prev',
-			),
+			// 'separate' => array(
+			// 	'before' => '/<div class="c-prev-next-nav__item c-prev-next-nav__item--prev/',
+			// 	'after'  => '<span class="rje-r002lp-a_prev_next_nav__separate"></span><div class="c-prev-next-nav__item c-prev-next-nav__item--prev',
+			// ),
 			'root_class' => array(
 				'before' => '/c-prev-next-nav/',
 				'after' => 'rje-r002lp-a_prev_next_nav',
@@ -58,7 +58,6 @@ class Single{
 				'before' => '/class="fas fa-angle-/',
 				'after' => 'class="rje-r002lp-a_pagination_arrow --',
 			),
-
 		);
 		foreach ( $target_words as $word ) {
 			$html = preg_replace( $word['before'], $word['after'], $html );
