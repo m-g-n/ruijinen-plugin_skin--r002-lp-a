@@ -20,5 +20,7 @@ LPパターン（R002）向けのSnow Monkeyスキンです
 - composer install でパッケージをインストール
 
 # 変更履歴
+## 0.0.0.2
+- Auto Updateの適応
 ## 0.0.0.1
 - プラグインの新規作成

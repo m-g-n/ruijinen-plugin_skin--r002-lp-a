@@ -27,7 +27,7 @@ class AutoUpdate{
 		new Updater(
 			RJE_SKIN_R002_LP_A_BASENAME,
 			'm-g-n',
-			'ruijinen-skin--r002-lp',
+			'ruijinen-plugin_skin--r002-lp-a',
 			[
 				'homepage' => 'https://rui-jin-en.com',
 			]
