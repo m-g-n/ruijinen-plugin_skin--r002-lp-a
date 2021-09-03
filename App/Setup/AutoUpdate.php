@@ -1,6 +1,6 @@
 <?php
 /**
- * @package ruijinen-skin--r002-lp
+ * @package ruijinen-skin-r002-lp
  * @author mgn
  * @license GPL-2.0+
  */
@@ -27,7 +27,7 @@ class AutoUpdate{
 		new Updater(
 			RJE_SKIN_R002_LP_A_BASENAME,
 			'm-g-n',
-			'ruijinen-plugin_skin--r002-lp-a',
+			'ruijinen-plugin_skin-r002-lp-a',
 			[
 				'homepage' => 'https://rui-jin-en.com',
 			]
