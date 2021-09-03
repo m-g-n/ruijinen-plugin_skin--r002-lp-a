@@ -2,7 +2,7 @@
 /**
  * Plugin name: 類人猿 LPパターン向けスキン
  * Description: 類人猿LPパターンに合ったSnow Monkeyスキンです
- * Version: 0.0.0.2
+ * Version: 0.0.0.6
  * Tested up to: 5.8
  * Requires at least: 5.8
  * Requires PHP: 5.6
@@ -10,9 +10,9 @@
  * Author URI: https://rui-jin-en.com/
  * License: GPL2 or later
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
- * Text Domain: ruijinen-skin--r002-lp
+ * Text Domain: ruijinen-skin-r002-lp
  * 
- * @package ruijinen-skin--r002-lp
+ * @package ruijinen-skin-r002-lp
  * @author mgn
  * @license GPL-2.0+
  */
@@ -31,7 +31,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 define( 'RJE_SKIN_R002_LP_A_URL', untrailingslashit( plugins_url( '', __FILE__ ) ) . '/' );  //このプラグインのURL.
 define( 'RJE_SKIN_R002_LP_A_PATH', untrailingslashit( plugin_dir_path( __FILE__ ) ) . '/' ); //このプラグインのパス.
 define( 'RJE_SKIN_R002_LP_A_BASENAME', plugin_basename( __FILE__ ) ); //このプラグインのベースネーム.
-define( 'RJE_SKIN_R002_LP_A_TEXTDOMAIN', 'ruijinen-skin--r002-lp-a' ); //テキストドメイン名.
+define( 'RJE_SKIN_R002_LP_A_TEXTDOMAIN', 'ruijinen-skin-r002-lp-a' ); //テキストドメイン名.
 
 /**
  * include files.
