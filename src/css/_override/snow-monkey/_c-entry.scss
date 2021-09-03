@@ -223,6 +223,9 @@
 //関連記事
 .c-entry-aside{
 	margin-top: px_to_rem(72);
+	@include mq(md){
+		margin-top: px_to_rem(105);
+	}
 	@include mq(lg){
 		max-width: 920px;
 		margin-right: auto;
@@ -230,5 +233,16 @@
 	}
 	.c-entries--text2 .c-entries__item:first-child > a {
 		padding-top: 0;
+	}
+}
+.p-related-posts__title{
+	@include smb-section-title;
+	margin-bottom: px_to_rem(30);
+	&::before,
+	&::after{
+		display: none;
+	}
+	@include mq(lg){
+		margin-bottom: px_to_rem(40);
 	}
 }
