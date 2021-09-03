@@ -1,6 +1,6 @@
 <?php
 /**
- * @package ruijinen-skin--r002-lp
+ * @package ruijinen-skin-r002-lp
  * @author mgn
  * @license GPL-2.0+
  */
