@@ -2,8 +2,11 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	padding-top: px_to_rem(64);
+	padding-top: px_to_rem(32);
 	border-top: 1px solid #999;
+	@include mq(md){
+		padding-top: px_to_rem(64);
+	}
 }
 
 .rje-r002lp-a_prev_next_nav__item{
