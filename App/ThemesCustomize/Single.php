@@ -16,7 +16,6 @@ class Single{
 		remove_action( 'snow_monkey_entry_meta_items', 'snow_monkey_entry_meta_items_author', 30 ); //author表示の削除
 		add_filter( 'snow_monkey_get_template_part_args_template-parts/content/prev-next-nav', array( $this, 'prev_next_nav_args'));
 		add_filter( 'snow_monkey_template_part_render_template-parts/content/prev-next-nav', array( $this, 'prev_next_nav_html'), 10, 3);
-		add_filter( 'snow_monkey_template_part_render_template-parts/content/related-posts', array( $this, 'related_posts_html'), 10, 3);
 	}
 
 	/**
@@ -62,21 +61,6 @@ class Single{
 		foreach ( $target_words as $word ) {
 			$html = preg_replace( $word['before'], $word['after'], $html );
 		}
-		return $html;
-	}
-
-	/**
-	 * 関連記事のタイトルのカスタマイズ.
-	 * @param $html テンプレートパーツの出力HTML
-	 * @param $name テンプレートパーツの名前
-	 * @param $vars テンプレートパーツのリクエスト配列
-	 */
-	public function related_posts_html( $html, $name, $vars ) {
-		$html = preg_replace( 
-			'/<h2 class="p-related-posts__title c-entry-aside__title">/s',
-			'<div class="rje-r002lp-a_related_posts__subtitle">RELATED ARTICLES</div><h2 class="rje-r002lp-a_related_posts__title">',
-			$html
-		);
 		return $html;
 	}
 
