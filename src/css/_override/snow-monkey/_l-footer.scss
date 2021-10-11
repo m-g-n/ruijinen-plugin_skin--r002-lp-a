@@ -1,7 +1,3 @@
-.l-footer{
-	background-color: #F9F6F3;
-}
-
 //ウィジェットエリア
 .l-footer-widget-area{
 	padding-top: px_to_rem(30);
@@ -14,7 +10,7 @@
 .l-footer-widget-area__item:not(:root){
 	margin-bottom: 0 !important;
 	a{
-		text-decoration: none;
+		// text-decoration: none;
 		color: var(--_color-text,#333);
 	}
 }
