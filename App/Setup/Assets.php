@@ -24,7 +24,7 @@ class Assets {
 			RJE_SKIN_R002_LP_A_BASENAME,
 			RJE_SKIN_R002_LP_A_URL . '/dist/css/style.css',
 			[],
-			// filemtime( RJE_SKIN_R002_LP_A_PATH . '/dist/css/skin.css' ) TODO：デバッグ終了後コメ外す
+			filemtime( RJE_SKIN_R002_LP_A_PATH . '/dist/css/style.css' )
 		);
 	}
 }
