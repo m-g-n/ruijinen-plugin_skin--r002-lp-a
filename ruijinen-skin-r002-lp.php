@@ -2,7 +2,7 @@
 /**
  * Plugin name: 類人猿 LPパターン向けスキン
  * Description: 類人猿LPパターンに合ったSnow Monkeyスキンです
- * Version: 0.0.1.0
+ * Version: 0.0.1.1
  * Tested up to: 5.8.1
  * Requires at least: 5.8.1
  * Requires PHP: 5.6

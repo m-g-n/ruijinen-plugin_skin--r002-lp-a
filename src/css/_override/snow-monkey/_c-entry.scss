@@ -198,14 +198,6 @@
 .blog .c-entry__content > *{
 	max-width: 920px;
 }
-//スリム幅
-.u-slim-width .c-entry__content{
-	> *{
-		@include mq(lg){
-			max-width: 47.5rem !important;
-		}
-	}
-}
 
 //フッター
 .c-entry__footer{
