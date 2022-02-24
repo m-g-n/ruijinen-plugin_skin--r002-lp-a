@@ -1,18 +1,27 @@
+// ------------------------------------------------------
+// 設定・読み込み・変数など
+// ------------------------------------------------------
+@use "../../_foundation/variable" as v;
+@use "../../_foundation/import" as i;
+
+// ------------------------------------------------------
+// スタイル
+// ------------------------------------------------------
 .wp-profile-box{
-	@include mq(lg){
+	@include i.mq(lg){
 		margin-top: 4.5rem;
 	}
 }
 .wp-profile-box__title{
 	border-bottom: none;
-	@include heading3;
-	@include mq(sm){
-		padding: #{px_to_rem(35)} #{px_to_rem(40)} #{px_to_rem(35) / 2};
+	@include i.heading3;
+	@include i.mq(sm){
+		padding: i.px_to_rem(35) i.px_to_rem(40) i.px_to_rem(17.5);
 	}
 }
 .wp-profile-box__container{
-	@include mq(sm){
-		padding: #{px_to_rem(35) / 2} #{px_to_rem(40)} #{px_to_rem(35)};
+	@include i.mq(sm){
+		padding: i.px_to_rem(17.5) i.px_to_rem(40) i.px_to_rem(35);
 	}
 }
 .wp-profile-box__body{
