@@ -1,31 +1,42 @@
+// ------------------------------------------------------
+// 設定・読み込み・変数など
+// ------------------------------------------------------
+@use "../variable" as v;
+@use "../mixin/mediaqueries" as *;
+@use "../function/px_to_rem" as *;
+@use "sass:math";
+
 //見出しのスタイル
 $base-font-size: 16;
 
+// ------------------------------------------------------
+// mixin
+// ------------------------------------------------------
 @mixin heading1{
-	font-size: (24 / $base-font-size) * 1rem;
+	font-size: px_to_rem(24);
 	font-weight: bold;
 	letter-spacing: 0.12em;
 	line-height: 1.8;
 	@include mq(sm){
-		font-size: (32 / $base-font-size) * 1rem;
+		font-size: px_to_rem(32);
 	}
 }
 @mixin heading2{
-	font-size: (20 / $base-font-size) * 1rem;
+	font-size: px_to_rem(20);
 	font-weight: bold;
 	letter-spacing: 0.12em;
 	line-height: 1.8;
 	@include mq(sm){
-		font-size: (24 / $base-font-size) * 1rem;
+		font-size: px_to_rem(24);
 	}
 }
 @mixin heading3{
-	font-size: (18 / $base-font-size) * 1rem;
+	font-size: px_to_rem(18);
 	font-weight: bold;
 	letter-spacing: 0.12em;
 	line-height: 1.8;
 	@include mq(sm){
-		font-size: (20 / $base-font-size) * 1rem;
+		font-size: px_to_rem(20);
 	}
 }
 @mixin heading4{
@@ -33,7 +44,7 @@ $base-font-size: 16;
 	letter-spacing: 0.12em;
 	line-height: 1.8;
 	@include mq(sm){
-		font-size: (18 / $base-font-size) * 1rem;
+		font-size: px_to_rem(18);
 	}
 }
 

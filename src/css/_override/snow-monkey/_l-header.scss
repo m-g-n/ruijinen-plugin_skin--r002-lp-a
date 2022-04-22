@@ -1,10 +1,19 @@
+// ------------------------------------------------------
+// 設定・読み込み・変数など
+// ------------------------------------------------------
+@use "../../_foundation/variable" as v;
+@use "../../_foundation/import" as i;
+
+// ------------------------------------------------------
+// スタイル
+// ------------------------------------------------------
 //ヘッダ
 .l-header__content > .l-1row-header > .c-fluid-container{
-	@include mq(lg){
-		padding-top: px_to_rem(20);
-		padding-right: px_to_rem(36);
-		padding-bottom: px_to_rem(20);
-		padding-left: px_to_rem(60);
+	@include i.mq(lg){
+		padding-top: i.px_to_rem(20);
+		padding-right: i.px_to_rem(36);
+		padding-bottom: i.px_to_rem(20);
+		padding-left: i.px_to_rem(60);
 	}
 }
 [data-scrolled="true"] .l-header__content > .l-1row-header > .c-fluid-container{
@@ -19,7 +28,7 @@
 //グローバルナビゲーション.
 .p-global-nav{
 	.c-navbar__item > a{
-		padding: px_to_rem(24);
+		padding: i.px_to_rem(24);
 		font-weight: normal;
 	}
 }

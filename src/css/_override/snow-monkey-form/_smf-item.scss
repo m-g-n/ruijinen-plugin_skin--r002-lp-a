@@ -1,3 +1,12 @@
+// ------------------------------------------------------
+// 設定・読み込み・変数など
+// ------------------------------------------------------
+@use "../../_foundation/variable" as v;
+@use "../../_foundation/import" as i;
+
+// ------------------------------------------------------
+// スタイル
+// ------------------------------------------------------
 .smf-form{
 	//フォーム用のアクセントカラー変数
 	--rje_form_accent_color: var(--accent-color, #cd162c);
@@ -67,7 +76,7 @@
 
 //ボタン
 .smf-button-control:not(:root) button{
-	@include button--ghost;
+	@include i.button--ghost;
 	background: unset;
 	color: var(--accent-color, #cd162c);
 	&:hover,
@@ -82,7 +91,7 @@
 
 //ポリシーに同意する
 .smf-item.is-policy-check:not(:root){
-	margin-top: px_to_rem(64);
+	margin-top: i.px_to_rem(64);
 	.smf-item__controls{
 		text-align: center;
 	}
@@ -96,12 +105,12 @@
 		margin-left: 1rem;
 		padding: 0.5em;
 		background-color: var(--accent-color, #cd162c);
-		font-size: px_to_rem(10);
+		font-size: i.px_to_rem(10);
 		line-height: 1;
 		color: #fff;
 	}
 }
 
 .smf-progress-tracker:not(:root){
-	margin-bottom: px_to_rem(64);
+	margin-bottom: i.px_to_rem(64);
 }

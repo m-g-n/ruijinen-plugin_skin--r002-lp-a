@@ -1,14 +1,23 @@
+// ------------------------------------------------------
+// 設定・読み込み・変数など
+// ------------------------------------------------------
+@use "../../_foundation/variable" as v;
+@use "../../_foundation/import" as i;
+
+// ------------------------------------------------------
+// スタイル
+// ------------------------------------------------------
 //ヘッダー
 .c-entry__header{
 	display: flex;
 	flex-direction: column;
-	@include mq(lg){
-		margin-bottom: px_to_rem(64);
+	@include i.mq(lg){
+		margin-bottom: i.px_to_rem(64);
 	}
 	//ページタイトル
 	.c-entry__title{
 		order: 2;
-		@include heading2;
+		@include i.heading2;
 	}
 	.page &,
 	.blog &,
@@ -22,7 +31,7 @@
 	//メタ
 	.c-entry__meta{
 		order: 1;
-		margin-bottom: px_to_rem(32);
+		margin-bottom: i.px_to_rem(32);
 	}
 	.c-meta{
 		display: flex;
@@ -60,10 +69,10 @@
 		align-items: center;
 		justify-content: center;
 		min-width: 100px;
-		margin-right: px_to_rem(25);
+		margin-right: i.px_to_rem(25);
 		padding: 0.25rem 0.5rem;
 		border: 1px solid;
-		font-size: px_to_rem(12);
+		font-size: i.px_to_rem(12);
 		text-align: center;
 		line-height: 1;
 		color: var(--accent-color,#cd162c);
@@ -89,13 +98,13 @@
 	margin-right: auto;
 	margin-left: auto;
 	max-width: calc(100% - 2rem);
-	@include mq(sm){
-		margin-top: #{px_to_rem(32)};
-		max-width: calc(100% - #{px_to_rem(64)});
+	@include i.mq(sm){
+		margin-top: i.px_to_rem(32);
+		max-width: calc(100% - i.px_to_rem(64));
 	}
-	@include mq(lg){
+	@include i.mq(lg){
 		margin-top: 0;
-		max-width: calc(100% - #{px_to_rem(120)});
+		max-width: calc(100% - i.px_to_rem(120));
 	}
 	&[data-has-content="true"]{
 		.c-page-header__bgimage{
@@ -118,13 +127,13 @@
 		margin-right: auto;
 		margin-left: auto;
 		max-width: calc(100% - 2rem);
-		@include mq(sm){
-			margin-top: #{px_to_rem(32)};
-			max-width: calc(100% - #{px_to_rem(64)});
+		@include i.mq(sm){
+			margin-top: i.px_to_rem(32);
+			max-width: calc(100% - i.px_to_rem(64));
 		}
-		@include mq(lg){
+		@include i.mq(lg){
 			margin-top: 0;
-			max-width: calc(100% - #{px_to_rem(120)});
+			max-width: calc(100% - i.px_to_rem(120));
 		}
 	}
 }
@@ -134,7 +143,7 @@
 	// align-items: center;
 }
 .c-page-header__title{
-	@include heading1;
+	@include i.heading1;
 	order: 2;
 }
 .c-page-header__meta{
@@ -145,12 +154,12 @@
 //ボディ
 .c-entry__body{
 	.c-eyecatch{
-		margin-bottom: px_to_rem(64);
+		margin-bottom: i.px_to_rem(64);
 	}
 	//サイドバーありテンプレートではない場合のみ
 	body:not([data-has-sidebar="true"]) &{
 		.c-eyecatch{
-			@include mq(lg){
+			@include i.mq(lg){
 				margin-left: -80px;
 				margin-right: -80px;
 				width: calc(100% + 160px);
@@ -161,30 +170,30 @@
 }
 .c-entry__content{
 	>:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6)+:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6):not(.is-style-RJE_R002LP_cta_fix), .textwidget>:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6)+:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6){
-		@include mq(lg){
-			margin-top: px_to_rem(40);
+		@include i.mq(lg){
+			margin-top: i.px_to_rem(40);
 		}
 	}
 	.alignfull+.alignfull {
 		margin-top: 0;
 	}
 	> h2{
-		@include heading2;
+		@include i.heading2;
 		color: var(--accent-color,#cd162c);
 		&::after{
 			content: "";
 			display: block;
-			margin-top: px_to_rem(10);
-			width: px_to_rem(32);
+			margin-top: i.px_to_rem(10);
+			width: i.px_to_rem(32);
 			height: 1px;
 			background-color: var(--accent-color,#cd162c);
 		}
 	}
 	> h3{
-		@include heading3;
+		@include i.heading3;
 	}
 	> h4{
-		@include heading4;
+		@include i.heading4;
 	}
 	> ul{
 		> li::marker{
@@ -192,7 +201,7 @@
 		}
 	}
 	p{
-		@include paragraph;
+		@include i.paragraph;
 	}
 }
 .blog .c-entry__content > *{
@@ -201,8 +210,8 @@
 
 //フッター
 .c-entry__footer{
-	@include mq(lg){
-		margin-top: px_to_rem(72);
+	@include i.mq(lg){
+		margin-top: i.px_to_rem(72);
 	}
 	.archive &,
 	.blog &{
@@ -214,11 +223,11 @@
 
 //関連記事
 .c-entry-aside{
-	margin-top: px_to_rem(72);
-	@include mq(md){
-		margin-top: px_to_rem(105);
+	margin-top: i.px_to_rem(72);
+	@include i.mq(md){
+		margin-top: i.px_to_rem(105);
 	}
-	@include mq(lg){
+	@include i.mq(lg){
 		max-width: 920px;
 		margin-right: auto;
 		margin-left: auto;
@@ -228,13 +237,13 @@
 	}
 }
 .p-related-posts__title{
-	@include smb-section-title;
-	margin-bottom: px_to_rem(30);
+	@include i.smb-section-title;
+	margin-bottom: i.px_to_rem(30);
 	&::before,
 	&::after{
 		display: none;
 	}
-	@include mq(lg){
-		margin-bottom: px_to_rem(40);
+	@include i.mq(lg){
+		margin-bottom: i.px_to_rem(40);
 	}
 }
