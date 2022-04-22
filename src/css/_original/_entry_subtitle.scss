@@ -14,4 +14,10 @@
 	align-items: center;
 	font-size: i.px_to_rem(12);
 	color: var(--accent-color,#cd162c);
+	.c-page-header__content &{
+		color: #fff;
+		&::after{
+			background-color: #fff;
+		}
+	}
 }
