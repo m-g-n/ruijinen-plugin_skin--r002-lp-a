@@ -64,7 +64,6 @@ class Bootstrap {
 		new App\Setup\AutoUpdate();
 		new App\Setup\TextDomain();
 		new App\Setup\Assets();
-		// new App\Setup\AdminMenu();
 	}
 
 	/**
