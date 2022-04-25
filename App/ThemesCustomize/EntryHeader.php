@@ -60,6 +60,7 @@ class EntryHeader{
 	public function view_subtitle() {
 		add_filter( 'snow_monkey_template_part_render_template-parts/archive/entry/header/header', array( $this, 'add_sub_title'), 10, 3);
 		add_filter( 'snow_monkey_template_part_render_template-parts/content/entry/header/header', array( $this, 'add_sub_title'), 10, 3);
+		add_filter( 'snow_monkey_template_part_render_template-parts/common/page-header', array( $this, 'add_sub_title_eyecatch'), 10, 3);
 
 		//投稿アーカイブのタイトルを書換
 		add_filter( 
@@ -86,6 +87,22 @@ class EntryHeader{
 		return $html;
 	}
 
+	/**
+	 * ページタイトル上部にサブタイトルを追記する（ページヘッダーの上にタイトルを表示）.
+	 */
+	public function add_sub_title_eyecatch( $html, $name, $vars ) {
+		$subtitle = $this->get_subtitle();
+		if ( $subtitle ) {
+			$before = '/<h1 class="c-page-header__title">/';
+			$after = '<div class="rje-r002lp-a_entry_subtitle">'.$subtitle.'</div><h1 class=c-page-header__title">';
+			$html = preg_replace( $before, $after, $html );
+		}
+		return $html;
+	}
+
+	/**
+	 * サブタイトルのテキストの設定.
+	 */
 	private function get_subtitle() {
 		$text = NULL;
 		if ( is_post_type_archive() ) {

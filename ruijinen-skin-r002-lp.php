@@ -17,8 +17,6 @@
  * @license GPL-2.0+
  */
 
-//TODO: 各ファイルの翻訳を作る
-
 namespace Ruijinen\Skin\R002_LP;
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -52,18 +50,30 @@ class Bootstrap {
 	 */
 	public function __construct() {
 		add_action( 'plugins_loaded', [ $this, 'bootstrap' ] );
-		add_action( 'after_setup_theme', [ $this, 'themes_customize' ] );
+		add_action( 'init', [ $this, 'load_textdomain' ] );
 	}
 
 	/**
 	 * Bootstrap.
 	 */
 	public function bootstrap() {
-		//クラスオブジェクト作成
-		new App\Setup\ActivatePlugin();
-		new App\Setup\AutoUpdate();
-		new App\Setup\TextDomain();
+		new App\Setup\AutoUpdate(); //自動更新チェック
+
+		//アクティベートチェックを行い問題がある場合はメッセージを出し離脱する.
+		$activate_check = new App\Setup\ActivateCheck();
+		if ( !empty( $activate_check->messages ) ) {
+			add_action('admin_notices', array( $activate_check,'make_alert_message'));
+			return;
+		}
+		add_action( 'after_setup_theme', [ $this, 'themes_customize' ] );
 		new App\Setup\Assets();
+	}
+
+	/**
+	 * Load Textdomain.
+	 */
+	public function load_textdomain() {
+		new App\Setup\TextDomain();
 	}
 
 	/**
