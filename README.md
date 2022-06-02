@@ -8,8 +8,8 @@ LPパターン（R002）向けのSnow Monkeyスキンです
 当プラグインディレクトリーまで移動したあと、
 
 - npm i でpackegeをインストール
-- npx gulp watch でSCSSファイルの修正を常時監視（SCSSを修正したら即時CSSにコンパイルしてくれる）
-- npx gulp sass でCSSにコンパイル（コマンド走ったときだけCSSをコンパイル）
+- npm run watch でSCSSファイルの修正を常時監視（SCSSを修正したら即時CSSにコンパイルしてくれる）
+- npm run build でCSSにコンパイル（コマンド走ったときだけCSSをコンパイル）
 
 ## composerのインストール方法
 当プラグインディレクトリーまで移動したあと、
@@ -17,6 +17,11 @@ LPパターン（R002）向けのSnow Monkeyスキンです
 - composer install でパッケージをインストール
 
 # 変更履歴
+## 1.5.0
+- アーカイブページのmeta情報の表示崩れの修正
+- README.mdのコマンド表記間違えの修正
+- プラグインの情報追加（autoupdate）
+
 ## 1.4.0
 - gulpでのコンパイルを廃止し、dart-scss・webpackで各種コンパイルを行う方式に変更
 - バージョン番号の修正（2桁繰り上げなど）
