@@ -222,7 +222,7 @@
 }
 
 //関連記事
-.c-entry-aside{
+.c-entry-aside:not(:root){
 	margin-top: i.px_to_rem(72);
 	@include i.mq(md){
 		margin-top: i.px_to_rem(105);
