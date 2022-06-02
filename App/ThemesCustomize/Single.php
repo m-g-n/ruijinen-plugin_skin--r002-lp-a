@@ -16,6 +16,7 @@ class Single{
 		remove_action( 'snow_monkey_entry_meta_items', 'snow_monkey_entry_meta_items_author', 30 ); //author表示の削除
 		add_filter( 'snow_monkey_get_template_part_args_template-parts/content/prev-next-nav', array( $this, 'prev_next_nav_args'));
 		add_filter( 'snow_monkey_template_part_render_template-parts/content/prev-next-nav', array( $this, 'prev_next_nav_html'), 10, 3);
+		add_filter('snow_monkey_template_part_render_template-parts/content/related-posts', array( $this, 'add_entries_class'));
 	}
 
 	/**
@@ -64,4 +65,15 @@ class Single{
 		return $html;
 	}
 
+	/**
+	 * Entries original class add.
+	 * @param array $args
+	 * @return array
+	 */
+	public function add_entries_class( $html) {
+		$before = 'p-related-posts ';
+		$after = 'p-related-posts is-style-RJE_R002LP_news_list ';
+		$html = str_replace( $before, $after, $html );
+		return $html;
+	}
 }
