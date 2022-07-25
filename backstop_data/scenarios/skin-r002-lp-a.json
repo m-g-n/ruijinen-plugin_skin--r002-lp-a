@@ -1,0 +1,52 @@
+[
+	{
+		"label": "Header",
+		"url": "http://localhost:1051/contact/",
+		"referenceUrl": "",
+		"delay": 1000,
+		"selectors": [".l-header"],
+		"removeSelectors": [],
+		"selectorExpansion": true,
+		"misMatchThreshold": 0.1
+	},
+	{
+		"label": "Footer",
+		"url": "http://localhost:1051/contact/",
+		"referenceUrl": "",
+		"delay": 1000,
+		"selectors": [".l-footer"],
+		"removeSelectors": [],
+		"selectorExpansion": true,
+		"misMatchThreshold": 0.1
+	},
+	{
+		"label": "HOME",
+		"url": "http://localhost:1051",
+		"referenceUrl": "",
+		"delay": 5000,
+		"selectors": [".p-entry-content"],
+		"removeSelectors": [],
+		"selectorExpansion": true,
+		"misMatchThreshold": 0.2
+	},
+	{
+		"label": "Archive",
+		"url": "http://localhost:1051/news",
+		"referenceUrl": "",
+		"delay": 2000,
+		"selectors": [],
+		"removeSelectors": [".l-header",".l-footer"],
+		"selectorExpansion": true,
+		"misMatchThreshold": 0.2
+	},
+	{
+		"label": "Single",
+		"url": "http://localhost:1051/archives/39",
+		"referenceUrl": "",
+		"delay": 2000,
+		"selectors": [],
+		"removeSelectors": [".l-header",".l-footer"],
+		"selectorExpansion": true,
+		"misMatchThreshold": 0.2
+	}
+]
