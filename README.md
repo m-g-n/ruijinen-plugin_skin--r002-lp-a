@@ -17,6 +17,9 @@ LPパターン（R002）向けのSnow Monkeyスキンです
 - composer install でパッケージをインストール
 
 # 変更履歴
+## 1.7.0
+- node.jsパッケージのアップグレード
+- GitHub Acitionsの調整
 ## 1.6.0
 - wp-env環境の導入
 - BackstopJSの導入
