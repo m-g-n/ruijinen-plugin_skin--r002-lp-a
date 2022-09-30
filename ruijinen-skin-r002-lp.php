@@ -2,7 +2,7 @@
 /**
  * Plugin name: 類人猿 LPパターン向けスキン
  * Description: 類人猿LPパターンに合ったSnow Monkeyスキンです
- * Version: 1.6.0
+ * Version: 1.7.0
  * Tested up to: 6.0
  * Requires at least: 6.0
  * Requires PHP: 5.6
@@ -11,7 +11,7 @@
  * License: GPL2 or later
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain: ruijinen-skin-r002-lp
- * 
+ *
  * @package ruijinen-skin-r002-lp
  * @author mgn
  * @license GPL-2.0+
