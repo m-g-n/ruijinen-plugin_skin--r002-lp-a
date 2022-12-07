@@ -2,9 +2,9 @@
 /**
  * Plugin name: 類人猿 LPパターン向けスキン
  * Description: 類人猿LPパターンに合ったSnow Monkeyスキンです
- * Version: 1.7.0
- * Tested up to: 6.0
- * Requires at least: 6.0
+ * Version: 1.8.0
+ * Tested up to: 6.1.1
+ * Requires at least: 6.1
  * Requires PHP: 5.6
  * Author: mgn Inc.,
  * Author URI: https://rui-jin-en.com/
@@ -26,6 +26,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * declaration constant.
  */
+define( 'RJE_SKIN_R002_LP_A_KEY', 'RJE_SKIN_R002LP_A' );  //このプラグインのKey.
 define( 'RJE_SKIN_R002_LP_A_URL', untrailingslashit( plugins_url( '', __FILE__ ) ) . '/' );  //このプラグインのURL.
 define( 'RJE_SKIN_R002_LP_A_PATH', untrailingslashit( plugin_dir_path( __FILE__ ) ) . '/' ); //このプラグインのパス.
 define( 'RJE_SKIN_R002_LP_A_BASENAME', plugin_basename( __FILE__ ) ); //このプラグインのベースネーム.
@@ -58,6 +59,7 @@ class Bootstrap {
 	 */
 	public function bootstrap() {
 		new App\Setup\AutoUpdate(); //自動更新チェック
+		new App\Setup\InPluginUpdateMessage(); //更新アラートメッセージに追加でメッセージを表示
 
 		//アクティベートチェックを行い問題がある場合はメッセージを出し離脱する.
 		$activate_check = new App\Setup\ActivateCheck();

@@ -17,6 +17,9 @@ LPパターン（R002）向けのSnow Monkeyスキンです
 - composer install でパッケージをインストール
 
 # 変更履歴
+## 1.8.0
+- Yarnをv1からv3にアップグレード
+- 更新アラートボックスメッセージ表示機能を追加
 ## 1.7.0
 - node.jsパッケージのアップグレード
 - GitHub Acitionsの調整
