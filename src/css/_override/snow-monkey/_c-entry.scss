@@ -48,7 +48,7 @@
 			margin-right: 0.35rem;
 			opacity: 0.5;
 		}
-		
+
 	}
 	.c-meta__item--modified{
 		display: flex;
@@ -87,9 +87,9 @@
 	}
 	.archive &,
 	.blog &{
-		max-width: 920px;
-		margin-right: auto;
-		margin-left: auto;
+    max-width: 920px;
+    margin-right: auto;
+    margin-left: auto;
 	}
 }
 //アイキャッチ付き
@@ -205,7 +205,9 @@
 	}
 }
 .blog .c-entry__content > *{
-	max-width: 920px;
+  @include i.mq(lg){
+    max-width: 920px;
+  }
 }
 
 //フッター
