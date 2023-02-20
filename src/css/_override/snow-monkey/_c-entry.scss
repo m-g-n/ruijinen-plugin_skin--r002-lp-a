@@ -160,10 +160,7 @@
 	body:not([data-has-sidebar="true"]) &{
 		.c-eyecatch{
 			@include i.mq(lg){
-				margin-left: -80px;
-				margin-right: -80px;
-				width: calc(100% + 160px);
-				max-width: none;
+        max-width: calc( var(--wp--style--global--content-size) + 160px );
 			}
 		}
 	}
@@ -204,7 +201,8 @@
 		@include i.paragraph;
 	}
 }
-.blog .c-entry__content > *{
+.blog .c-entry__content > *,
+.archive .c-entry__content > *{
   @include i.mq(lg){
     max-width: 920px;
   }
