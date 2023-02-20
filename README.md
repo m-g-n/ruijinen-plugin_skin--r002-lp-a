@@ -18,7 +18,7 @@ LPパターン（R002）向けのSnow Monkeyスキンです
 
 # 変更履歴
 ## 1.9.1
-- Snow Monkey v19.1.3の仕様変更に伴いsingleページのスリム幅指定の調整
+- Snow Monkey v19.1.5の仕様変更に伴いsingleページのスリム幅指定の調整
 ## 1.9.0
 - Snow Monkey v19・Snow Monkey Blocks v18の対応
 - Nodeパッケージの更新
