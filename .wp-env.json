@@ -13,7 +13,9 @@
     "https://downloads.wordpress.org/plugin/disable-emojis.zip",
     "https://downloads.wordpress.org/plugin/ewww-image-optimizer.zip",
     "https://downloads.wordpress.org/plugin/duplicate-post.zip",
-    "https://github.com/m-g-n/ruijinen-plugin_block-patterns/releases/latest/download/ruijinen-block-patterns.zip"
+    "https://github.com/m-g-n/ruijinen-plugin_block-patterns/releases/latest/download/ruijinen-block-patterns.zip",
+    "https://downloads.wordpress.org/plugin/snow-monkey-blocks.zip",
+    "https://github.com/m-g-n/ruijinen-plugin_block-patterns--r002-lp/releases/latest/download/ruijinen-block-patterns-r002-lp.zip"
   ],
   "port": 1051,
   "env": {
