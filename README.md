@@ -17,6 +17,8 @@ LPパターン（R002）向けのSnow Monkeyスキンです
 - composer install でパッケージをインストール
 
 # 変更履歴
+## 1.9.4
+- composerのアップデート
 ## 1.9.3
 - composer・nodeパッケージのアップデート
 ## 1.9.2
